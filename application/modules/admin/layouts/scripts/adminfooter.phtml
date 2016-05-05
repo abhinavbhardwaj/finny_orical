@@ -1,0 +1,70 @@
+
+ </div>
+<script>
+   var BASE_URL		=	'<?php echo $this->baseUrl();?>';
+</script>
+ <?php
+
+ $layout =  $this->layout()->viewType;
+
+	  $this->headScript()
+			->appendFile($this->baseUrl() . '/assets_admin/js/jquery-1.11.0.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/bootstrap.min.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/plugins/metisMenu/metisMenu.min.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/plugins/morris/raphael.min.js');
+
+   if(!empty($layout) && ($layout == "dataTable")){//adding datatable script
+	  $this->headScript()
+			->appendFile($this->baseUrl() . '/assets_admin/js/plugins/dataTables/jquery.dataTables.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/plugins/dataTables/dataTables.bootstrap.js');
+   }
+
+   if(!empty($layout) && ($layout == "dateTime")){//adding DateTime script
+	  $this->headScript()
+	  ->appendFile($this->baseUrl() . '/assets_admin/js/plugins/dateTime/moment.js')
+	  ->appendFile($this->baseUrl() . '/assets_admin/js/plugins/dateTime/bootstrap-datetimepicker.js');
+   }
+
+$this->headScript()->appendFile($this->baseUrl() . '/assets_admin/js/plugins/number/toword.js');
+$this->headScript()->appendFile($this->baseUrl() . '/assets_admin/js/sb-admin-2.js');
+$this->headScript()->appendFile($this->baseUrl() . '/assets_admin/js/custom.js') ;
+//$this->headScript()->appendFile($this->baseUrl() . '/assets_admin/js/plugins/print/printThis.js') ;
+
+echo $this->headScript();
+
+
+   if(!empty($layout) && ($layout == "dataTable")){//adding datatable script
+	 ?>
+	 <script>
+    $(document).ready(function() {
+        $('#dataTables').dataTable();
+    });
+    </script>
+	 <?php
+   }
+
+   if(!empty($layout) && ($layout == "dateTime")){//adding DateTime script
+	  ?>
+	  <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+				  daysOfWeekDisabled: [0, 6]
+				  });
+            });
+
+            $(function () {
+                $('#datetimepicker2').datetimepicker({
+				  daysOfWeekDisabled: [0, 6]
+				  });
+            });
+        </script>
+  <?php
+  }
+?>
+
+    <!-- /#wrapper -->
+
+ <div id="login-copyright"><?php echo date("Y"); ?> &copy; <?php echo COPY_RIGHTS?></div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<?php
+echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--<link rel='shortcut icon' type='image/x-icon' href = '<?php echo HOST_NAME ?>/images/fav.ico' />-->
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php
+    echo $this->headLink()
+     ->appendStylesheet($this->baseUrl().'/assets_admin/css/font-awesome.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/bootstrap.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/animate.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/waves.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/layout.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/components.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/plugins.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/common-styles.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/pages.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/responsive.css')
+	 ->appendStylesheet($this->baseUrl().'/assets_admin/css/matmix-iconfont.css')
+	 ->appendStylesheet('http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,500italic')
+	 ->appendStylesheet('http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600');
+
+    ?>
+
+</head>
+
+<body class="login-page">
+    <div class="page-container">
+        <div class="login-branding">
+            <a href="<?php echo $this->baseUrl();?>">
+			   <img src="<?php echo $this->baseUrl();?>/images/logo.png" alt="logo">
+			</a>
+        </div>
+
+<?php  echo $this->layout()->content; ?>
+
+        
+
+        <div class="login-footer">
+            Crafted with<i class="fa fa-heart"></i>by <a href="#"><?php echo COPY_RIGHTS?></a>
+
+        </div>
+
+    </div>
+
+<?php
+	$this->headScript()
+			->appendFile($this->baseUrl() . '/assets_admin/js/jquery-1.11.2.min.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/jquery-migrate-1.2.1.min.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/jRespond.min.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/bootstrap.min.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/nav-accordion.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/hoverintent.js')
+		    ->appendFile($this->baseUrl() . '/assets_admin/js/waves.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/switchery.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/jquery.loadmask.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/icheck.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/bootbox.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/animation.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/colorpicker.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/animation.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/bootstrap-datepicker.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/floatlabels.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/smart-resize.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/layout.init.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/matmix.init.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/retina.min.js')
+			->appendFile($this->baseUrl() . '/assets_admin/js/validation.js') ;
+
+    echo $this->headScript();
+?>
+<!-- END BODY -->
+
+</html>

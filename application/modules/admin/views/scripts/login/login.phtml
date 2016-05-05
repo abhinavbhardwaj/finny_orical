@@ -1,0 +1,32 @@
+<?php 
+/**
+ *
+ * This page is created for login
+ * @author Abhinav Bhardwaj
+ * @since: May 05, 2016
+ * @copyright   Copyright (c) A3logics India Ltd. (http://www.a3logics.com)
+ * @Library     Zend FrameWork 1.11
+ * @version     finny oracle 1.0
+ */
+?>        <div class="login-container">
+            <img class="login-img-card" src="<?php echo $this->baseUrl();?>images/avatar/jaman-01.jpg" alt="login thumb" />
+            <form class="form-signin" action="tables.html">
+                <input type="text" id="inputEmail" class="form-control floatlabel " placeholder="Email Address" required autofocus>
+                <input type="password" id="inputPassword" class="form-control floatlabel " placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" class="switch-mini" /> Remember Me
+                    </label>
+                </div>
+                <button class="btn btn-primary btn-block btn-signin" type="submit">Sign In</button>
+            </form>
+
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div>
+        <div class="create-account">
+            <a href="#">
+                Create Account
+            </a>
+        </div>
